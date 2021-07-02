@@ -23,11 +23,8 @@ You can import the code straight into your preferred IDE or run the sample using
 
 <b>mvn clean package
 
-$  mvn spring-boot:run</b>
+mvn spring-boot:run</b>
 
-or
-
-<b>java -jar ./target/springbootdemo-1.0.0-SNAPSHOT.jar </b>
 
 <h2> Using the API </h2>
 
