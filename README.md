@@ -3,7 +3,7 @@
 This is a small Spring-Boot Rest Api with Swagger.
 
 It allows to add or delete a word to/from a collection, to get the number of word's occurences and to get a list of unique words. 
-It is also possible to see the entire collection (words and number of occurnaces) and to delete all the elements.
+It is also possible to see the entire collection (words and number of occurences) and to delete all the elements.
 
 Swagger was used for Rest Api documentation and for easier manual testing.
 
