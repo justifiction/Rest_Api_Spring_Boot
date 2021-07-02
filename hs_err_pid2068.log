@@ -1,0 +1,208 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 197132288 bytes for Failed to commit area from 0x0000000744200000 to 0x000000074fe00000 of length 197132288.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/open/src/hotspot/os/windows/os_windows.cpp:3301), pid=2068, tid=4716
+#
+# JRE version:  (13.0.2+8) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:F:\IntelliJ IDEA 2020.1.2\lib\idea_rt.jar=57610:F:\IntelliJ IDEA 2020.1.2\bin -Dfile.encoding=UTF-8 pl.justifiction.springbootdemo.SpringbootdemoApplication
+
+Host: Intel(R) Core(TM) i3-7100U CPU @ 2.40GHz, 4 cores, 11G,  Windows 10 , 64 bit Build 19041 (10.0.19041.1023)
+Time: Thu Jul  1 20:38:18 2021 Œrodkowoeuropejski czas letni elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000027b76cea800):  JavaThread "Unknown thread" [_thread_in_vm, id=4716, stack(0x000000d7de300000,0x000000d7de400000)]
+
+Stack: [0x000000d7de300000,0x000000d7de400000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x624f9a]
+V  [jvm.dll+0x770cfa]
+V  [jvm.dll+0x7724af]
+V  [jvm.dll+0x772ab3]
+V  [jvm.dll+0x24bf08]
+V  [jvm.dll+0x6222aa]
+V  [jvm.dll+0x6170b5]
+V  [jvm.dll+0x30a88c]
+V  [jvm.dll+0x30a6c2]
+V  [jvm.dll+0x30fe36]
+V  [jvm.dll+0x353f46]
+V  [jvm.dll+0x353720]
+V  [jvm.dll+0x2e550a]
+V  [jvm.dll+0x2e67a2]
+V  [jvm.dll+0x74dd78]
+V  [jvm.dll+0x361989]
+V  [jvm.dll+0x730e65]
+V  [jvm.dll+0x3cc53f]
+V  [jvm.dll+0x3ce861]
+C  [jli.dll+0x51ff]
+C  [ucrtbase.dll+0x21bb2]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ff9c5c1ccb8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000027b76d40000 GCTaskThread "GC Thread#0" [stack: 0x000000d7de400000,0x000000d7de500000] [id=21920]
+  0x0000027b76d5a800 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d7de500000,0x000000d7de600000] [id=10648]
+  0x0000027b76d5c000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000d7de600000,0x000000d7de700000] [id=16096]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ff9c54551d7]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000027b76ce63e0] Heap_lock - owner thread: 0x0000027b76cea800
+
+Heap address: 0x0000000744200000, size: 3006 MB, Compressed Oops mode: Non-zero based: 0x0000000744200000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (8 events):
+Event: 0.042 Loaded shared library F:\Java\jdk-13.0.2\bin\zip.dll
+Event: 0.045 Loaded shared library F:\Java\jdk-13.0.2\bin\jimage.dll
+Event: 0.051 Loading shared library F:\Java\jdk-13.0.2\lib\libjava.base-coop.dll failed, error code 126
+Event: 0.051 Loading shared library F:\Java\jdk-13.0.2\lib\libjava.logging-coop.dll failed, error code 126
+Event: 0.051 Loading shared library F:\Java\jdk-13.0.2\lib\libjdk.compiler-coop.dll failed, error code 126
+Event: 0.051 Loading shared library F:\Java\jdk-13.0.2\lib\libjdk.scripting.nashorn-coop.dll failed, error code 126
+Event: 0.052 Loading shared library F:\Java\jdk-13.0.2\lib\libjdk.internal.vm.ci-coop.dll failed, error code 126
+Event: 0.052 Loading shared library F:\Java\jdk-13.0.2\lib\libjdk.internal.vm.compiler-coop.dll failed, error code 126
+
+
+Dynamic libraries:
+0x00007ff765580000 - 0x00007ff76558f000 	F:\Java\jdk-13.0.2\bin\java.exe
+0x00007ffa4cb50000 - 0x00007ffa4cd45000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffa1ed00000 - 0x00007ffa1ed13000 	C:\Program Files\AVAST Software\Avast\aswhook.dll
+0x00007ffa4be90000 - 0x00007ffa4bf4d000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffa4a320000 - 0x00007ffa4a5e8000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffa4ab20000 - 0x00007ffa4ac20000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffa29e30000 - 0x00007ffa29e45000 	F:\Java\jdk-13.0.2\bin\VCRUNTIME140.dll
+0x00007ffa2d290000 - 0x00007ffa2d2a8000 	F:\Java\jdk-13.0.2\bin\jli.dll
+0x00007ffa4c2c0000 - 0x00007ffa4c36c000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffa4b990000 - 0x00007ffa4ba2e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffa4bd90000 - 0x00007ffa4be2b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffa4c190000 - 0x00007ffa4c2bb000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffa4b610000 - 0x00007ffa4b7b0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffa2d300000 - 0x00007ffa2d59a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1052_none_60b8f8fd71f5e8cb\COMCTL32.dll
+0x00007ffa4a2f0000 - 0x00007ffa4a312000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffa4ac30000 - 0x00007ffa4ac5a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffa4a9e0000 - 0x00007ffa4aaeb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffa4a650000 - 0x00007ffa4a6ed000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffa40c70000 - 0x00007ffa40c7a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffa4c130000 - 0x00007ffa4c160000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffa0d010000 - 0x00007ffa0d0ab000 	F:\Java\jdk-13.0.2\bin\msvcp140.dll
+0x00007ff9c5160000 - 0x00007ff9c5cbd000 	F:\Java\jdk-13.0.2\bin\server\jvm.dll
+0x00007ffa4c180000 - 0x00007ffa4c188000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffa3bd90000 - 0x00007ffa3bd99000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffa4caa0000 - 0x00007ffa4cb0b000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffa3ee20000 - 0x00007ffa3ee47000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffa48420000 - 0x00007ffa48432000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffa43d10000 - 0x00007ffa43d20000 	F:\Java\jdk-13.0.2\bin\verify.dll
+0x00007ffa40830000 - 0x00007ffa40a14000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffa40750000 - 0x00007ffa4077c000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffa4a950000 - 0x00007ffa4a9d3000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffa23660000 - 0x00007ffa23686000 	F:\Java\jdk-13.0.2\bin\java.dll
+0x00007ffa45560000 - 0x00007ffa4556e000 	F:\Java\jdk-13.0.2\bin\instrument.dll
+0x00007ffa23510000 - 0x00007ffa23527000 	F:\Java\jdk-13.0.2\bin\zip.dll
+0x00007ffa3f340000 - 0x00007ffa3f34a000 	F:\Java\jdk-13.0.2\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;F:\Java\jdk-13.0.2\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\AVAST Software\Avast;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.1052_none_60b8f8fd71f5e8cb;F:\Java\jdk-13.0.2\bin\server
+
+VM Arguments:
+jvm_args: -XX:TieredStopAtLevel=1 -Xverify:none -Dspring.output.ansi.enabled=always -Dcom.sun.management.jmxremote -Dspring.jmx.enabled=true -Dspring.liveBeansView.mbeanDomain -Dspring.application.admin.enabled=true -javaagent:F:\IntelliJ IDEA 2020.1.2\lib\idea_rt.jar=57610:F:\IntelliJ IDEA 2020.1.2\bin -Dfile.encoding=UTF-8 
+java_command: pl.justifiction.springbootdemo.SpringbootdemoApplication
+java_class_path (initial): F:\REST\springbootdemo\target\classes;C:\Users\Justyna K\.m2\repository\org\springframework\boot\spring-boot-starter-web\2.5.2\spring-boot-starter-web-2.5.2.jar;C:\Users\Justyna K\.m2\repository\org\springframework\boot\spring-boot-starter\2.5.2\spring-boot-starter-2.5.2.jar;C:\Users\Justyna K\.m2\repository\org\springframework\boot\spring-boot-starter-logging\2.5.2\spring-boot-starter-logging-2.5.2.jar;C:\Users\Justyna K\.m2\repository\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;C:\Users\Justyna K\.m2\repository\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;C:\Users\Justyna K\.m2\repository\org\apache\logging\log4j\log4j-to-slf4j\2.14.1\log4j-to-slf4j-2.14.1.jar;C:\Users\Justyna K\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.1\log4j-api-2.14.1.jar;C:\Users\Justyna K\.m2\repository\org\slf4j\jul-to-slf4j\1.7.31\jul-to-slf4j-1.7.31.jar;C:\Users\Justyna K\.m2\repository\jakarta\annotation\jakarta.annotation-api\1.3.5\jakarta.annotation-api-1.3.5.jar;C:\Users\Justyna K\.m2\repository\org\yaml\snakeyaml\1.28\snakeyaml-1.28.jar;C:\Users\Justyna K\.m2\repository\org\springframework\boot\spring-boot-starter-json\2.5.2\spring-boot-starter-json-2.5.2.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.12.3\jackson-databind-2.12.3.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.12.3\jackson-annotations-2.12.3.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.12.3\jackson-core-2.12.3.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jdk8\2.12.3\jackson-datatype-jdk8-2.12.3.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\datatype\jackson-datatype-jsr310\2.12.3\jackson-datatype-jsr310-2.12.3.jar;C:\Users\Justyna K\.m2\repository\com\fasterxml\jackson\module\jackson-module-parameter-names\2.12.3\jackson-module-parameter-names-2.12.3.jar;C:\Users\Justyna K\.m2\reposi
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 197132288                                 {product} {ergonomic}
+     bool ManagementServer                         = true                                      {product} {command line}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 3152019456                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 6973028                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 244685212                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 0                                      {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 3152019456                             {manageable} {ergonomic}
+     intx TieredStopAtLevel                        = 1                                         {product} {command line}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=F:\Java\jdk-13.0.2
+PATH=C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;G:\\Commands;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Intel\UCRT\;C:\Program Files\Intel\UCRT\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;F:\Java\jdk-13.0.2\bin;C:\Program Files\MinGW\bin;C:\Program Files\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\Common Files\Datawatch\Drivers\7.1.5\jre\bin;C:\Program Files\Common Files\Datawatch\Drivers\7.1.5\jre\bin\server;C:\Program Files\PuTTY\;F:\Git\cmd;C:\Program Files (x86)\AMD\ATI.ACE\Core-Static;C:\WINDOWS\System32\OpenSSH\;G:\Programy\bin;C:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit\;G:\anaconda;G:\anaconda\Library\mingw-w64\bin;G:\anaconda\Library\usr\bin;G:\anaconda\Library\bin;G:\anaconda\Scripts;G:\Programy\Scripts\;G:\Programy\;C:\Microsoft VS Code\bin;F:\IntelliJ IDEA 2020.1.2\bin;;C:\Users\Justyna K\AppData\Local\Microsoft\WindowsApps
+USERNAME=Justyna K
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.1023)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, system-wide physical 12022M (2682M free)
+TotalPageFile size 26323M (AvailPageFile size 72M)
+current process WorkingSet (physical memory assigned to process): 10M, peak: 10M
+current process commit charge ("private bytes"): 49M, peak: 237M
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (13.0.2+8) for windows-amd64 JRE (13.0.2+8), built on Dec 11 2019 09:20:33 by "mach5one" with unknown MS VC++:1916
+
+END.
