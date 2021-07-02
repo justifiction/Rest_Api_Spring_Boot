@@ -54,7 +54,7 @@ public class SwaggerConfig {
         return new ApiInfoBuilder()
                 .title("REST Api with Spring Boot and Swagger2")
                 .description("Simple REST Api with Spring Boot and Swagger. It allows to add or delete a word to/from a collection, " +
-                        "to get the number of word's occurances and to get a list of unique words. It is also possible to see the entire collection (words and number of occurnaces)" +
+                        "to get the number of word's occurances and to get a list of unique words. It is also possible to see the entire collection (words and number of occurences)" +
                         " and to delete all the elements.")
                 .contact(new Contact("Justyna Kotlarz",
                         "https://github.com/justifiction",
